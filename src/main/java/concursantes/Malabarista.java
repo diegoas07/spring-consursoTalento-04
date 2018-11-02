@@ -2,7 +2,7 @@ package concursantes;
 
 public class Malabarista implements Concursante {
 
-	private int pelotas = 5;
+	private int pelotas;
 	
 	public Malabarista() {
 		

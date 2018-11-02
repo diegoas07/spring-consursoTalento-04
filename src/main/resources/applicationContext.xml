@@ -6,6 +6,17 @@
 	
 	<!--  codigo quivalente en java -->
 	<!-- Malabarista malabarista = new Malabarista(); -->
-	<bean id="solei" class="concursantes.Malabarista" ></bean>
+	<bean id="solei" class="concursantes.Malabarista" >
+	<constructor-arg value="10"></constructor-arg>
+	</bean>
+	
+	<bean id="soneto" class="concursantes.Soneto">
+	</bean>
 
+	<bean id="soleiR" class="concursantes.MalabaristaRecitador">
+		<constructor-arg value="15"></constructor-arg>
+		<constructor-arg ref="soneto"></constructor-arg>		
+	</bean>
+	
+	
 </beans>
