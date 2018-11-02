@@ -19,4 +19,19 @@
 	</bean>
 	
 	
+	<bean id="piano" class="concursantes.Piano">
+	</bean>
+	
+	<bean id="jasonP" class="concursantes.Musico" >
+	<property name="cancion" value="Noche de paz"></property>
+	<property name="instrumento" ref="piano"></property>
+	</bean>
+	
+	<bean id="janosF" class="concursantes.Musico">
+		<property name="cancion" value="equinox"></property>
+		<property name="instrumento">
+			<bean class="concursantes.Saxofon"></bean>
+		</property>
+	</bean>
+	
 </beans>
