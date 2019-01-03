@@ -1,5 +1,10 @@
 package concursantes;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MalabaristaRecitador extends Malabarista {
 	
 	private Poema poema;
@@ -8,8 +13,9 @@ public class MalabaristaRecitador extends Malabarista {
 		super();
 		this.poema = poema;
 	}
-	
-	public MalabaristaRecitador( int pelotas, Poema poema) {
+	// Inyeccion automatica por constructor , inyectamos valores por primitivos y por referencias
+	@Autowired
+	public MalabaristaRecitador(@Value("15") int pelotas, Poema poema) {
 		super(pelotas);
 		this.poema = poema;
 	}

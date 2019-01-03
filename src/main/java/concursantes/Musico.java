@@ -1,8 +1,17 @@
 package concursantes;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Musico implements Concursante {
-	
+	// Inyeccion de valor primitivo (podemos eliminar el metodo set)
+	@Value("Noche de Paz")
 	String cancion;
+	@Autowired
+	@Qualifier("piano")
 	Instrumento instrumento;
 	
 	public Musico() {
@@ -11,10 +20,6 @@ public class Musico implements Concursante {
 	
 	public String getCancion() {
 		return cancion;
-	}
-
-	public void setCancion(String cancion) {
-		this.cancion = cancion;
 	}
 
 	public Instrumento getInstrumento() {
